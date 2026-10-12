@@ -1,0 +1,6 @@
+@startuml hola
+skinparam classAttributeIconSize 0
+class Hola {
+    +saludar(): void
+}
+@enduml

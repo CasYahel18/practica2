@@ -1,0 +1,8 @@
+@startuml persona
+skinparam classAttributeIconSize 0
+class Persona {
+    + nombre: string
+    + Persona(nombre: string)
+    + saludar(): void
+}
+@enduml

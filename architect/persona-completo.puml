@@ -1,0 +1,11 @@
+@startuml persona_completo
+skinparam classAttributeIconSize 0
+class Persona {
+    + nombre: string
+    - _edad: number
+    + Persona(nombre: string, edad: number)    
+    + saludar(): void
+    + get edad(): number
+    + set edad(edad: number): void
+}
+@enduml

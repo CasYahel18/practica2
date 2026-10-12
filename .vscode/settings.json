@@ -1,0 +1,5 @@
+{
+ "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "https://www.plantuml.com/plantuml",
+    "js/ts.tsdk.path": "node_modules\\typescript\\lib"
+}
