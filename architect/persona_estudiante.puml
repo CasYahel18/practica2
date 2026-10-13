@@ -1,0 +1,22 @@
+@startuml persona_estudiante
+skinparam classAttributeIconSize 0
+
+class Persona {
+    + _nombre: string
+    - _edad: number
+    + Persona(nombre: string, edad: number)
+    + saludar(): void
+    + get edad(): number
+    + set edad(edad: number): void
+}
+
+class Estudiante {
+    - _carrera: string
+    + Estudiante(nombre: string, edad: number, carrera: string)
+    + estudiar(): void
+    + get carrera(): string
+    + set carrera(carrera: string): void
+}
+
+Persona <|-- Estudiante
+@enduml

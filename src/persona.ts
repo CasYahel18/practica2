@@ -33,4 +33,26 @@ console.log('La edad es: ', persona.edad); // Si
 persona.edad = 100; // Si
 persona.saludar(); // Si
 persona.edad = -3; //
+class Estudiante extends Persona {
+    private _carrera: string;
 
+    constructor(nombre: string, edad: number, carrera: string) {
+        super(nombre, edad);
+        this._carrera = carrera;
+    }
+
+    public estudiar(): void {
+        console.log(`${this._nombre} está estudiando la carrera de ${this._carrera}`);
+    }
+
+    public get carrera(): string {
+        return this._carrera;
+    }
+    public set carrera(carrera: string) {
+        if(carrera.trim() !== "") {
+            this._carrera = carrera;
+        } else {
+            console.log("La carrera no puede estar vacía");
+        }
+    }   
+}
