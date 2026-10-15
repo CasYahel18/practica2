@@ -1,0 +1,26 @@
+@startuml casa
+skinparam classAttributeIconSize 0
+
+class Puerta {
+    - _color: string
+    + Puerta(color: string)
+    + abrir(): void
+    + cerrar(): void
+}
+
+class Casa {
+    - _direccion: string
+    - _puerta: Puerta
+    + Casa(direccion: string, puerta: Puerta)
+    + entrar(): void
+    + salir(): void
+}
+
+Casa "1" *-- "1" Puerta : tiene una puerta principal
+
+note bottom of Casa
+  Composición: la Casa está formada por su Puerta.
+  La Puerta es parte de la Casa y su ciclo de vida
+  está ligado al de la Casa.
+end note
+@enduml

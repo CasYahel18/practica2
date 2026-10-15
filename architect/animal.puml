@@ -1,0 +1,44 @@
+@startuml animal
+skinparam classAttributeIconSize 0
+
+abstract class Animal {
+    + nombre: string
+    + Animal(nombre: string)
+    {abstract} + hacerSonido(): void
+    + moverse(): void
+}
+
+class Perro {
+    + Perro(nombre: string)
+    + hacerSonido(): void
+}
+
+class Gato {
+    + Gato(nombre: string)
+    + hacerSonido(): void
+}
+
+Animal <|-- Perro
+Animal <|-- Gato
+
+note right of Animal
+  Clase abstracta:
+  no se pueden crear objetos directamente
+  a partir de Animal.
+
+  hacerSonido() es abstracto y cada
+  subclase debe implementarlo.
+  moverse() es concreto y lo heredan
+  Perro y Gato.
+end note
+
+note bottom of Perro
+  Ejemplo: Perro("Rex")
+  hacerSonido() muestra: ¡Guau!
+end note
+
+note bottom of Gato
+  Ejemplo: Gato("Michi")
+  hacerSonido() muestra: ¡Miau!
+end note
+@enduml
